@@ -1,7 +1,7 @@
 {
-  "name": "quietsocksclient",
+  "name": "bnawineclubclient",
   "version": "1.0.0",
-  "description": "Website for quietsocks.",
+  "description": "Website for BNA Wine Club.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

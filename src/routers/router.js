@@ -1,4 +1,5 @@
 import Backbone from "backbone";
+import { WelcomePage } from "../models/welcome-page";
 
 export const Workspace = Backbone.Router.extend({
   routes: {
@@ -6,6 +7,7 @@ export const Workspace = Backbone.Router.extend({
   },
 
   defaultRoute: function() {
-    console.log("hello! he's here");
+    const welcomePage = new WelcomePage();
+    welcomePage.fetch();
   }
 });

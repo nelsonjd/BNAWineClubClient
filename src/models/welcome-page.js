@@ -1,5 +1,6 @@
-import config from "./config.json";
+import App from "../App";
+import { AppConstants } from "../AppConstants";
 
-const WelcomePage = Backbone.Model.extend({
-  url: config.base
+export const WelcomePage = Backbone.Model.extend({
+  urlRoot: AppConstants.baseUrl + '/api/welcomepage'
 });

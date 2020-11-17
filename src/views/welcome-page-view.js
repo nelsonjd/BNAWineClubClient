@@ -1,4 +1,4 @@
-import WelcomePage from "./WelcomePage";
+import WelcomePage from "../components/WelcomePage";
 import React from "react";
 import ReactDOM from "react-dom";
 

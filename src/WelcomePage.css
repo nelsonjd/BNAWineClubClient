@@ -1,0 +1,16 @@
+
+
+@font-face {
+  font-family: 'Monoton';
+  src: url('./fonts/Monoton-Regular.ttf') format('truetype');
+}
+
+
+h1 {
+  color: white;
+  font-family: 'Monoton', cursive;
+}
+ 
+p {
+  color: white;
+}

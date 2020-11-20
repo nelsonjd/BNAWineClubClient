@@ -5,12 +5,11 @@
   src: url('./fonts/Monoton-Regular.ttf') format('truetype');
 }
 
+.welcome-page {
+  color: #ffffff;
+}
 
 h1 {
-  color: white;
   font-family: 'Monoton', cursive;
 }
  
-p {
-  color: white;
-}

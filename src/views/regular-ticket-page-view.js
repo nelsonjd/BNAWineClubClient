@@ -1,17 +1,19 @@
-import WelcomePage from "../components/WelcomePage";
 import React from "react";
 import ReactDOM from "react-dom";
+import RegularTicketPage from "../components/RegularTicketPage";
 
-export const WelcomePageView = Backbone.View.extend({
+export const RegularTicketPageView = Backbone.View.extend({
   className: "view-container",
 
   initialize(options) {
     this.router = options.router;
-    this.handleRegClick = this.handleRegClick.bind(this);
   },
 
   render() {
-    ReactDOM.render(<WelcomePage handleRegClick={this.handleRegClick} />, this.el);
+    ReactDOM.render(
+      <RegularTicketPage />,
+      this.el
+    );
     return this;
   },
 
@@ -21,6 +23,6 @@ export const WelcomePageView = Backbone.View.extend({
   },
 
   handleRegClick() {
-    this.router.navigate('regularticket', {trigger: true})
-  }
+    this.router.navigate("regularticket", { trigger: true });
+  },
 });

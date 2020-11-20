@@ -1,0 +1,22 @@
+.unmute-button {
+  color: #ffffff;
+  height: 100px; 
+  width: 200px;
+  background-color: indigo;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+.regular-video {
+  height: 75%;
+}
+
+
+.regular-ticket-page {
+  height: 100vh;
+}
+
+.not-visible {
+  display: none;
+}

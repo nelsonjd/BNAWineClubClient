@@ -1,6 +1,14 @@
 
 body {
-  background-color: #a87ca0;
   font-family: Courier, Arial, sans-serif;
   font-size: 18px;
+  margin: 0;
+}
+
+.welcome-body {
+   background-color: #a87ca0;
+}
+
+.video-body {
+  background-color: #000000;
 }

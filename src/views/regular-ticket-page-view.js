@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import RegularTicketPage from "../components/RegularTicketPage";
+import $ from "jquery";
 
 export const RegularTicketPageView = Backbone.View.extend({
   className: "view-container",
@@ -10,6 +11,10 @@ export const RegularTicketPageView = Backbone.View.extend({
   },
 
   render() {
+    const body = $('body');
+    body.removeClass();
+    body.addClass('video-body');
+    
     ReactDOM.render(
       <RegularTicketPage />,
       this.el

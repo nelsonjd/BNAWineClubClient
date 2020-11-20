@@ -1,6 +1,7 @@
 import WelcomePage from "../components/WelcomePage";
 import React from "react";
 import ReactDOM from "react-dom";
+import $ from 'jquery';
 
 export const WelcomePageView = Backbone.View.extend({
   className: "view-container",
@@ -11,7 +12,14 @@ export const WelcomePageView = Backbone.View.extend({
   },
 
   render() {
-    ReactDOM.render(<WelcomePage handleRegClick={this.handleRegClick} />, this.el);
+    const body = $("body");
+    body.removeClass();
+    body.addClass("welcome-body");
+    
+    ReactDOM.render(
+      <WelcomePage handleRegClick={this.handleRegClick} />,
+      this.el
+    );
     return this;
   },
 
@@ -21,6 +29,6 @@ export const WelcomePageView = Backbone.View.extend({
   },
 
   handleRegClick() {
-    this.router.navigate('regularticket', {trigger: true})
-  }
+    this.router.navigate("regularticket", { trigger: true });
+  },
 });

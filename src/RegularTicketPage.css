@@ -9,6 +9,8 @@
 }
 
 .regular-video {
+  position: relative;
+  top: 12.5%;
   height: 75%;
 }
 

@@ -1,22 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import RegularTicketPage from "../components/RegularTicketPage";
+import VipForm from "../components/VipForm";
 import $ from "jquery";
 
-export const RegularTicketPageView = Backbone.View.extend({
+export const VipTicketPageView = Backbone.View.extend({
   initialize(options) {
     this.router = options.router;
   },
 
   render() {
-    const body = $('body');
+    const body = $("body");
     body.removeClass();
-    body.addClass('video-body');
-    
-    ReactDOM.render(
-      <RegularTicketPage />,
-      this.el
-    );
+    body.addClass("normal-body");
+
+    ReactDOM.render(<VipForm />, this.el);
     return this;
   },
 

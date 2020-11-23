@@ -25,7 +25,7 @@ class VipForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           What is the passphrase?
-          <input value={this.state.value} onChange={this.handleChange} />
+          <input className="passphrase-input" value={this.state.value} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit" />
       </form>

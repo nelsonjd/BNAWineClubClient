@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import VipVideo from "../components/VipVideo";
+import VipVideoSwap from "../components/VipVideo";
 import $ from "jquery";
 
 export const VipVideoView = Backbone.View.extend({
@@ -9,11 +9,7 @@ export const VipVideoView = Backbone.View.extend({
   },
 
   render() {
-    const body = $("body");
-    body.removeClass();
-    body.addClass("video-body");
-
-    ReactDOM.render(<VipVideo />, this.el);
+    ReactDOM.render(<VipVideoSwap />, this.el);
     return this;
   },
 

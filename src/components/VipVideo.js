@@ -1,20 +1,43 @@
 import React, { Component } from "react";
 import "../VipVideo.css";
+import $ from "jquery";
+
+class VipVideoSwap extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isInvitationVisible: false};
+    this.onEnded = this.onEnded.bind(this);
+  }
+    
+  onEnded() {
+    this.setState({isInvitationVisible: true});
+  }
+
+  render() {
+    if (this.state.isInvitationVisible) {
+      const body = $("body");
+      body.removeClass();
+      body.addClass("normal-body");
+      return <VipInvitation />;
+    }
+
+    const body = $("body");
+    body.removeClass();
+    body.addClass("video-body");
+    return <VipVideo onEnded={this.onEnded} />
+  }
+}
+
 
 class VipVideo extends Component {
   constructor(props) {
     super(props);
-    this.state = { isMuted: true, isInvitationVisible: false };
+    this.state = {isMuted: true};
     this.handleClick = this.handleClick.bind(this);
-    this.onEnded = this.onEnded.bind(this);
   }
 
   handleClick(event) {
-    this.setState({ isMuted: false });
-  }
-
-  onEnded(event) {
-    this.setState({isInvitationVisible: true});
+    this.setState({isMuted: false});
   }
 
   render() {
@@ -26,7 +49,7 @@ class VipVideo extends Component {
           className="vip-video"
           autoPlay
           playsInline
-          onEnded={this.onEnded}
+          onEnded={this.props.onEnded}
           muted={isMuted}
         >
           <source
@@ -38,11 +61,24 @@ class VipVideo extends Component {
           onClick={this.handleClick}
           className={`unmute-button ${isMuted ? "" : "not-visible"}`}
         >
-          Unmute
+          Click to un-mute,<br />
+          Watch to end to see details
         </button>
       </div>
     );
   }
 }
 
-export default VipVideo;
+function VipInvitation(props) {
+  return (
+  <div className="vip-invitation">
+    <p>Time: 6:00 P.M.</p>
+    <p>Date: Thursday, December 3, 2020</p>
+    <p>Location: Please contact Mr. Villareal, his number is ...</p>
+    <p>Attire: Semi-formal, i.e. half-dress</p>
+  </div>
+  );
+}
+
+
+export default VipVideoSwap;

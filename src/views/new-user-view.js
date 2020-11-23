@@ -27,7 +27,9 @@ export const NewUserView = Backbone.View.extend({
     user.save({name: 'William', password: entry}, {
       error: (error, request) =>
       {
-        // navigate to princess bride
+        this.router.navigate("usererror", {
+          trigger: true,
+        });
       },
       success: (model, response) => {
         this.router.navigate("vipvideo", {

@@ -1,14 +1,3 @@
-.unmute-button {
-  font-family: 'Galada', cursive;
-  color: #ffffff;
-  height: 100px; 
-  width: 200px;
-  background-color: indigo;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-}
-
 .vip-video {
   position: relative;
   top: 12.5%;
@@ -20,10 +9,7 @@
   height: 100vh;
 }
 
-.not-visible {
-  display: none;
-}
-
 .vip-invitation {
   text-align: center;
+  padding-top: 4em;
 }

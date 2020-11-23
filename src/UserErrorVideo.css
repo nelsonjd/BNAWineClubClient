@@ -1,10 +1,11 @@
-.regular-video {
+.user-error-video {
   position: relative;
   top: 12.5%;
   height: 75%;
 }
 
 
-.regular-ticket-page {
+.user-error-video-container {
   height: 100vh;
 }
+

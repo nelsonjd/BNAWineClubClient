@@ -13,7 +13,7 @@ class WelcomePage extends Component {
         <h1>Welcome to Wine Club Formal</h1>
         <p>Messrs.:<br />
         Andrew Castillo<br />
-        Wilson Laine<br />
+        Wilson C. Laine<br />
         Jordan Nelson<br />
         William Overton<br />
         Aaron Villareal<br />

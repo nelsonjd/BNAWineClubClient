@@ -61,8 +61,8 @@ class VipVideo extends Component {
           onClick={this.handleClick}
           className={`unmute-button ${isMuted ? "" : "not-visible"}`}
         >
-          Click to un-mute,<br />
-          Watch to end to see details
+          Details to follow video<br />
+          Click to unmute
         </button>
       </div>
     );

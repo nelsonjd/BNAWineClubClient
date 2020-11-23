@@ -38,7 +38,7 @@ class UserErrorVideo extends Component {
           onClick={this.handleClick}
           className={`unmute-button ${isMuted ? "" : "not-visible"}`}
         >
-          Unmute
+          Click to unmute
         </button>
       </div>
     );

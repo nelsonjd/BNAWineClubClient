@@ -24,13 +24,25 @@ class RegularTicketPage extends Component {
 
     return (
       <div className="regular-ticket-page">
-        <video className="regular-video" autoPlay playsInline muted={isMuted} onLoadedMetadata={this.handleLoadedMetadata}>
+        <video
+          className="regular-video"
+          autoPlay
+          playsInline
+          muted={isMuted}
+          onLoadedMetadata={this.handleLoadedMetadata}
+        >
           <source
             src="https://bna-wine-club-media-bucket.s3.us-east-2.amazonaws.com/muppets.mp4"
             type="video/mp4"
           />
         </video>
-        <button onClick={this.handleClick} className={`unmute-button ${isMuted ? "" : "not-visible"}`}>Unmute</button>
+        <button
+          onClick={this.handleClick}
+          className={`unmute-button ${isMuted ? "" : "not-visible"}`}
+        >
+          Sold Out<br />
+          Click to unmute
+        </button>
       </div>
     );
   }

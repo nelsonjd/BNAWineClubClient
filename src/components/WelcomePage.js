@@ -14,10 +14,10 @@ class WelcomePage extends Component {
         <p>Messrs.:<br />
         Andrew Castillo<br />
         Wilson C. Laine<br />
-        Jordan Nelson<br />
+        Jordan D. Nelson<br />
         William Overton<br />
         Aaron Villareal<br />
-        & George Wilson,</p>
+        & George A. Wilson,</p>
         <p>cordially invite you to a formal evening of food and wine on Thursday, December 3, 2020. Please select your ticket type below to view more details:</p>
         <button onClick={this.props.handleRegClick}>Regular Ticket</button>
         <button className="vip-tix-button" onClick={this.props.handleVipClick}>VIP Ticket</button>

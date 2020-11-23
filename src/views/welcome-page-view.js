@@ -33,6 +33,6 @@ export const WelcomePageView = Backbone.View.extend({
   },
 
   handleVipClick() {
-    this.router.navigate("vipticket", { trigger: true });
+    this.router.navigate("users/new", { trigger: true });
   }
 });

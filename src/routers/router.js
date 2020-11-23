@@ -2,7 +2,8 @@ import { WelcomePage } from "../models/welcome-page";
 import { WelcomePageView } from "../views/welcome-page-view";
 import { RegularTicketPageView } from "../views/regular-ticket-page-view";
 import { RegularTicketPage } from "../models/regular-ticket-page";
-import { VipTicketPageView } from "../views/vip-ticket-page-view";
+import { NewUserView } from "../views/new-user-view";
+import { VipVideoView } from "../views/vip-video-view";
 
 export const Workspace = Backbone.Router.extend({
   initialize(options) {
@@ -12,7 +13,8 @@ export const Workspace = Backbone.Router.extend({
 
   routes: {
     regularticket: "regularticket",
-    vipticket: "vipticket",
+    "users/new": "newUsers",
+    vipvideo: "vipvideo",
     "*path": "defaultRoute",
   },
 
@@ -38,12 +40,22 @@ export const Workspace = Backbone.Router.extend({
     this.currentView.render();
   },
 
-  vipticket: function () {
+  newUsers: function () {
 
-    this.currentView = new VipTicketPageView({
+    this.currentView = new NewUserView({
       el: this.rootElement,
       router: this,
     });
     this.currentView.render();
   },
+
+
+  vipvideo: function() {
+    this.currentView = new VipVideoView({
+      el: this.rootElement,
+      router: this
+    });
+
+    this.currentView.render();
+  }
 });

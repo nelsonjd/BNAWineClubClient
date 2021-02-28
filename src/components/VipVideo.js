@@ -74,7 +74,7 @@ function VipInvitation(props) {
   <div className="vip-invitation">
     <p>Time: 6:00 P.M.</p>
     <p>Date: Thursday, December 3, 2020</p>
-    <p>Location: Please contact Mr. Villareal, his number is ...</p>
+    <p>Location: Details to come ...</p>
     <p>Attire: Cocktail attire</p>
   </div>
   );

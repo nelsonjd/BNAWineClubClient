@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "aws s3 sync dist/ s3://winebrosandhoes.com/dist/ --profile shortsands"
+    "deploy": "aws s3 cp public/index.html s3://bnawineclub.com/index.html --profile shortsands && aws s3 sync dist/ s3://bnawineclub.com/dist/ --profile shortsands"
   },
   "author": "Jordan D. Nelson",
   "license": "ISC",
